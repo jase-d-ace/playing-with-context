@@ -32,7 +32,7 @@ class Provider extends Component {
 
   render() {
     return(
-      <MyContext.Provider value={{...this.state, value: 'new Value'}}>
+      <MyContext.Provider value={{...this.state}}>
         {this.props.children}
       </MyContext.Provider>
     )

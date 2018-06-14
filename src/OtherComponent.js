@@ -18,8 +18,8 @@ class OtherComponent extends Component {
   render() {
     return (
       <MyContext.Consumer>
-        {(context) => (
-          <p>{console.log('got context', context)} {context.apiDataLoaded ? context.name : 'hihihi'}</p>
+        {({apiData, ...rest}) => (
+          <p>{console.log('got context', rest)} {rest.apiDataLoaded ? apiData.name : 'hihihi'}</p>
         )}
       </MyContext.Consumer>
     )

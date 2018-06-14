@@ -11,6 +11,7 @@ class Test extends Component {
             <p>My name is {context.name}, and I am {context.age} years old.</p>
             <button onClick={context.birthday}>Age me one year</button>
             <input type='text' onChange={context.rename} placeholder='give me a new name' />
+            <input type='text' onChange={context.renameBrother} placeholder='give my brother a new name' />
             <NewComponent />
           </React.Fragment>
         )}

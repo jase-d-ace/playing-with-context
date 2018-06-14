@@ -25,6 +25,11 @@ class Provider extends Component {
       this.setState({
         gamer: !this.state.gamer
       })
+    },
+    renameBrother: e => {
+      this.setState({
+        brother: e.target.value
+      })
     }
   }
 

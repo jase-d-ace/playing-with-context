@@ -28,6 +28,14 @@ class Provider extends Component {
         gamer: !this.state.gamer
       })
     },
+    apiDataLoaded: false,
+    apiData: null,
+    loadData: (stuff) => {
+      this.setState({
+        apiDataLoaded: true,
+        apiData: stuff
+      })
+    }
   }
 
   render() {

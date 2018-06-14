@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MyContext } from './Provider'
 import NewComponent from './NewComponent';
+import OtherComponent from './OtherComponent';
 
 class Test extends Component {
   render() {
@@ -13,6 +14,7 @@ class Test extends Component {
             <input type='text' onChange={context.rename} placeholder='give me a new name' name='name' />
             <input type='text' onChange={context.rename} placeholder='give my brother a new name' name='brother' />
             <NewComponent />
+            <OtherComponent loadData={context.loadData} />
           </React.Fragment>
         )}
       </MyContext.Consumer>

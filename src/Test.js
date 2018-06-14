@@ -10,8 +10,8 @@ class Test extends Component {
           <React.Fragment>
             <p>My name is {context.name}, and I am {context.age} years old.</p>
             <button onClick={context.birthday}>Age me one year</button>
-            <input type='text' onChange={context.rename} placeholder='give me a new name' />
-            <input type='text' onChange={context.renameBrother} placeholder='give my brother a new name' />
+            <input type='text' onChange={context.rename} placeholder='give me a new name' name='name' />
+            <input type='text' onChange={context.rename} placeholder='give my brother a new name' name='brother' />
             <NewComponent />
           </React.Fragment>
         )}

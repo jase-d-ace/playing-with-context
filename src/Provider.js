@@ -17,8 +17,10 @@ class Provider extends Component {
       })
     },
     rename: e => {
+      let name = e.target.name;
+      let value = e.target.value
       this.setState({
-        name: e.target.value
+        [name] : value
       })
     },
     toggleGamer: () => {
@@ -26,11 +28,6 @@ class Provider extends Component {
         gamer: !this.state.gamer
       })
     },
-    renameBrother: e => {
-      this.setState({
-        brother: e.target.value
-      })
-    }
   }
 
   render() {

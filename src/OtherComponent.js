@@ -7,7 +7,6 @@ class OtherComponent extends Component {
     fetch('https://swapi.co/api/people/1')
     .then( info => info.json() )
     .then( (data) => {
-      console.log('got a thing', data)
       this.props.loadData(data)
     })
     .catch( err => {
@@ -19,7 +18,7 @@ class OtherComponent extends Component {
     return (
       <MyContext.Consumer>
         {({apiData, ...rest}) => (
-          <p>{console.log('got context', rest)} {rest.apiDataLoaded ? apiData.name : 'hihihi'}</p>
+          <p>{rest.apiDataLoaded ? apiData.name : 'hihihi'}</p>
         )}
       </MyContext.Consumer>
     )

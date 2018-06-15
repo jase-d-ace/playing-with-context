@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export const MyContext = React.createContext();
 
 
-class Provider extends Component {
+export default class Provider extends Component {
 
   state = {
     name: 'Jase',
@@ -47,4 +47,3 @@ class Provider extends Component {
   }
 }
 
-export default Provider

@@ -26,10 +26,12 @@ class Test extends Component {
 
   changeState(e) {
     let newState = this.state.buzz;
-    newState.push(e.target.value)
-    this.setState({
-      buzz: newState
-    })
+    if (e.target.value) {
+      newState.push(e.target.value)
+      this.setState({
+        buzz: newState
+})
+    }
   }
 
   // The child of any Consumer component is ALWAYS a render prop (aka a function that returns some JSX) instead of pure JSX. The parameter of this render prop is the context that we passed from our Provider "value" prop. In this case, it's the state object that we defined at the very top level of our component tree

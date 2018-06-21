@@ -30,7 +30,7 @@ class Test extends Component {
       newState.push(e.target.value)
       this.setState({
         buzz: newState
-})
+      })
     }
   }
 
